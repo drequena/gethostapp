@@ -4,4 +4,5 @@ import os
 
 def index(request):
     host=os.uname().nodename
-    return HttpResponse("My Hostname:"+host)
+    arch=os.uname().machine
+    return HttpResponse("My Hostname:"+host+" and my Arch:"+arch)
